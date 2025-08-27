@@ -4,98 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>გუგა შათირიშვილი — პორტფოლიო</title>
-  <meta name="description" content="გუგა შათირიშვილი — Linux, Git/GitHub, GitHub Pages, Bash." />
-  <meta name="author" content="გუგა შათირიშვილი" />
-  <meta name="theme-color" content="#84cc16" />
-  <link rel="icon" href="assets/favicon.png" />
+  <meta name="description" content="გუგა შათირიშვილი — გამორჩეული მოსწავლე: Linux, Bash, Git/GitHub, GitHub Pages, WSL/WSLg, სწავლის/გასაღების უნარები." />
+  <meta name="theme-color" content="#22c55e" />
   <meta property="og:title" content="გუგა შათირიშვილი — პორტფოლიო" />
-  <meta property="og:description" content="Linux · Git/GitHub · GitHub Pages · WSLg" />
+  <meta property="og:description" content="Linux · Bash · Git/GitHub · GitHub Pages · WSL/WSLg · სწავლების უნარი" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://github.com/avtotrainer/guga" />
+  <meta property="og:url" content="https://avtotrainer.github.io/guga/" />
 
   <style>
-    /* ===== Theme: Slate / Lime (clean, high-contrast) ===== */
     :root{
-      --bg:#0a1012;        /* სლეით-შავი ფონური */
-      --bg2:#0f171a;       /* რბილი სლეითი */
-      --ink:#e6f0f2;       /* ღია ტექსტი */
-      --muted:#9fb0b6;     /* რბილი ტექსტი */
-      --card:#0c1517;      /* ბარათის ფონი */
-      --border:#1c2a2f;    /* საზღვარი */
-      --brand:#84cc16;     /* ლაიმ-აქცენტი */
-      --brand-2:#22d3ee;   /* ცისფერი აქცენტი */
-      --ring:#bef264;      /* focus outline */
-      --maxw:1120px; --r:18px;
-      --shadow:0 18px 44px rgba(2,6,23,.45);
+      --bg:#0a1012; --bg2:#0f171a; --ink:#e6f0f2; --muted:#9fb0b6;
+      --card:#0c1517; --border:#1c2a2f;
+      --brand:#22c55e; --brand2:#10b981; --ring:#34d399;
+      --r:18px; --shadow:0 18px 42px rgba(2,6,23,.45); --maxw:1100px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0; color:var(--ink);
       background:
-        radial-gradient(1200px 700px at -10% -20%, #0b2a2a, transparent 60%),
-        radial-gradient(900px 600px at 110% 0%, #12422a55, transparent 55%),
+        radial-gradient(1100px 600px at -10% -20%, #0b2a2a, transparent 55%),
+        radial-gradient(900px 500px at 120% 0%, #12422a55, transparent 55%),
         linear-gradient(160deg, var(--bg), var(--bg2));
-      font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial;
+      font:16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial;
     }
-    a{color:var(--brand-2); text-decoration:none}
+    a{color:#86efac; text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
-    .muted{color:var(--muted)}
 
-    /* Header */
-    header{position:sticky; top:0; z-index:10; backdrop-filter:blur(6px); background:#0a1012cc; border-bottom:1px solid var(--border)}
-    nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .logo{font-weight:900; letter-spacing:.4px}
-    .nav{display:flex; gap:16px; flex-wrap:wrap}
+    header{position:sticky; top:0; z-index:10; backdrop-filter:blur(8px); background:#0a1012cc; border-bottom:1px solid var(--border)}
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .logo{font-weight:900; letter-spacing:.3px}
+    .nav{display:flex; gap:14px; flex-wrap:wrap}
     .btn{
       display:inline-flex; align-items:center; gap:8px; cursor:pointer;
       background:linear-gradient(135deg, var(--brand), #16a34a);
-      color:#0b1a12; border:0; padding:10px 14px; border-radius:12px; font-weight:800; box-shadow:var(--shadow)
+      color:#04120c; border:0; padding:10px 14px; border-radius:12px; font-weight:800; box-shadow:var(--shadow)
     }
-    .btn.ghost{
-      background:transparent; color:var(--ink);
-      border:1px solid #24433b; box-shadow:none
+    .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--border); box-shadow:none}
+    .chip{
+      display:inline-flex; align-items:center; gap:6px; padding:6px 10px;
+      border-radius:999px; background:#0e2019; color:#bbf7d0; font-weight:800; border:1px solid #1b3b31
     }
 
-    /* Hero (split, avatar center-left) */
-    .hero{padding:56px 0 24px}
-    .hero-wrap{display:grid; grid-template-columns: .9fr 1.1fr; gap:26px; align-items:center}
+    .hero{padding:52px 0 28px}
+    .hero-wrap{display:grid; grid-template-columns:.9fr 1.1fr; gap:26px; align-items:center}
+    @media (max-width:900px){ .hero-wrap{grid-template-columns:1fr} }
     .avatar{
-      width:200px; height:200px; border-radius:22px; margin:auto;
-      display:grid; place-items:center; overflow:hidden; border:2px solid #22d3ee;
-      background:radial-gradient(100% 100% at 50% 0%, #082019, #071412); box-shadow:var(--shadow)
+      border-radius:22px; overflow:hidden; border:2px solid #22d3ee; box-shadow:var(--shadow);
+      background:radial-gradient(100% 100% at 50% 0%, #082019, #071412); display:grid; place-items:center; aspect-ratio:3/4
     }
     .avatar svg{width:90%; height:90%}
     .card{
-      background:linear-gradient(180deg, #0c1b1a, #0a1414);
-      border:1px solid var(--border); border-radius:var(--r); padding:24px; box-shadow:var(--shadow)
+      background:linear-gradient(180deg, #0c1b1a, #0a1414); border:1px solid var(--border);
+      border-radius:var(--r); padding:22px; box-shadow:var(--shadow)
     }
-    h1{margin:0 0 10px; font:800 clamp(28px,4.2vw,48px)/1.1 ui-serif, Georgia, serif}
-    .lead{font-size:18px; color:var(--muted); margin:0 0 14px}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#0e2019; color:#d9f99d; font-weight:800}
+    h1{margin:0 0 8px; font:900 clamp(28px,4.6vw,48px)/1.1 ui-serif, Georgia, serif}
+    .lead{color:var(--muted); font-size:18px; margin:6px 0 12px}
 
-    /* Sections */
     section{padding:28px 0}
-    section h2{margin:0 0 8px; font:800 clamp(22px,3vw,30px)/1.2 ui-serif, Georgia, serif}
-    .grid{display:grid; gap:16px}
+    section h2{margin:0 0 10px; font:900 clamp(22px,3.3vw,30px)/1.2 ui-serif, Georgia, serif}
+    .grid{display:grid; gap:14px}
     .cols-3{grid-template-columns:repeat(3,1fr)}
     .cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:900px){ .hero-wrap{grid-template-columns:1fr} .cols-3,.cols-2{grid-template-columns:1fr} }
+    @media (max-width:900px){ .cols-3,.cols-2{grid-template-columns:1fr} }
+    .card.sm{padding:16px}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block; padding:4px 10px; border-radius:999px; background:#112a1f; color:#bbf7d0; font-size:12px; border:1px solid #1b3b31}
 
-    .mini{display:inline-block; padding:4px 10px; border-radius:999px; background:#112a1f; color:#bbf7d0; font-size:12px}
-    .card h3{margin:0}
+    .bar{height:10px; background:#0f231b; border:1px solid #1b3b31; border-radius:999px; overflow:hidden}
+    .bar > i{display:block; height:100%; background:linear-gradient(90deg, #22c55e, #10b981); width:0}
 
-    /* Form */
-    form{display:grid; gap:10px}
-    input, textarea{
-      padding:10px 12px; border-radius:12px; border:1px solid #24433b; background:#0a1012; color:var(--ink)
-    }
-    input:focus, textarea:focus, .btn:focus{outline:3px solid var(--ring); outline-offset:2px}
+    .tl{border-left:2px dashed #204a3f; padding-left:12px}
+    .tli{margin:0 0 12px}
+    .tli b{color:#e2f7f0}
 
-    /* Footer */
-    footer{padding:34px 0 48px; color:#96a7ad; font-size:14px; background:#080e10; border-top:1px solid var(--border)}
-    .footer-grid{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+    pre{margin:10px 0; padding:12px; border-radius:12px; background:#0b1a14; border:1px solid #1b3b31; overflow:auto}
+
+    footer{padding:30px 0 44px; color:#96a7ad; border-top:1px solid var(--border); background:#080e10}
+    .foot{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center}
     .sep{height:1px; background:var(--border); margin:12px 0 18px}
   </style>
 </head>
@@ -103,74 +90,82 @@
   <header>
     <div class="container">
       <nav aria-label="მთავარი ნავიგაცია">
-        <div class="logo">🧩 გუგა შათირიშვილი <span class="muted">· პორტფოლიო</span></div>
+        <div class="logo">🥇 გუგა შათირიშვილი <span class="muted">· პორტფოლიო</span></div>
         <div class="nav">
-          <a href="#about">ჩემ შესახებ</a>
+          <a href="#results">მიღწევები</a>
           <a href="#projects">პროექტები</a>
           <a href="#skills">უნარები</a>
-          <a href="#contact">კონტაქტი</a>
+          <a href="#timeline">ქრონო</a>
+          <a href="#teach">გადმოცემა</a>
           <a class="btn ghost" href="mailto:guga422@din.ge">✉️ წერილი</a>
+          <a class="btn" href="https://avtotrainer.github.io/guga/" target="_blank" rel="noopener">🌐 Live</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="hero-wrap">
-          <!-- Avatar / Silhouette -->
-          <div class="avatar" aria-label="პროფილის სილუეტი">
-            <!-- ბიჭის სილუეტის SVG პლეისჰოლდერი (კუთხიანი ფორმით, სხვანაირი სტილი) -->
-            <svg viewBox="0 0 128 128" role="img" aria-label="ბიჭის სილუეტი">
+          <figure class="avatar" aria-label="ბიჭის სილუეტი სათვალეებით">
+            <!-- სხვა სტილის სილუეტი (თმის კონტურით/სათვალეებით) -->
+            <svg viewBox="0 0 128 128" role="img" aria-label="ბიჭის სილუეტი სათვალეებით">
               <defs>
                 <linearGradient id="g" x1="0" x2="1">
                   <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#84cc16"/>
+                  <stop offset="1" stop-color="#22c55e"/>
                 </linearGradient>
               </defs>
-              <rect x="4" y="4" width="120" height="120" rx="22" fill="url(#g)" opacity=".18"/>
+              <rect x="6" y="6" width="116" height="116" rx="18" fill="url(#g)" opacity=".16"/>
               <!-- თავი -->
-              <circle cx="64" cy="46" r="22" fill="#86efac"/>
-              <!-- მხრები/ტანი (კუთხიანი) -->
-              <path d="M18 106c8-24 28-36 46-36s38 12 46 36" fill="#34d399"/>
+              <circle cx="64" cy="46" r="21" fill="#86efac"/>
+              <!-- სათვალე -->
+              <rect x="44" y="40" width="16" height="8" rx="3" fill="#22d3ee"/>
+              <rect x="68" y="40" width="16" height="8" rx="3" fill="#22d3ee"/>
+              <rect x="60" y="43" width="8" height="3" fill="#22d3ee"/>
+              <!-- მხრები/ტანი -->
+              <path d="M18 108c8-24 28-36 46-36s38 12 46 36" fill="#34d399"/>
             </svg>
-          </div>
+          </figure>
 
           <div class="card">
-            <span class="pill">Linux · Git · GitHub Pages · WSLg</span>
-            <h1>გამარჯობა, მე ვარ გუგა შათირიშვილი</h1>
+            <span class="chip">Linux · Bash · Git/GitHub · GitHub Pages · <b>WSL/WSLg</b></span>
+            <h1>გამარჯობა! მე ვარ გუგა შათირიშვილი</h1>
             <p class="lead">
-              საზაფხულო სკოლის დროს **დავაყენე** და **განვაახლე** Manjaro Linux, ტერმინალით ვიმუშავე საბაზო ბრძანებებით,
-              Git/GitHub-ით ვაკონტროლებდი კოდს და **GitHub Pages-ზე ავაქვეყნე** სტატიკური საიტი.
-              Windows გარემოში **WSLg ავამუშავე**, რომ Linux აპები გრაფიკულად გამეშვა.
+              ამ ნაკადში <b>გამორჩეულ მოსწავლედ</b> დავრჩი. პრაქტიკაში <b>Manjaro Linux დავაყენე/განვაახლე</b>,
+              ტერმინალით ვიმუშავე, Git/GitHub-ით ვმართავ კოდს და GitHub Pages-ზე <b>გამოვაქვეყნე</b> სტატიკური საიტები.
+              განსაკუთრებით მომეწონა <b>WSL/WSLg</b> — Windows-ში Linux-ის ძალა, თან გრაფიკით.
             </p>
             <div style="display:flex; gap:10px; flex-wrap:wrap">
-              <a class="btn" href="mailto:guga422@din.ge">დამიკავშირდი</a>
-              <a class="btn ghost" href="https://github.com/avtotrainer/guga" target="_blank" rel="noopener">🐙 GitHub რეპო</a>
+              <a class="btn ghost" href="mailto:guga422@din.ge">ელ-ფოსტა</a>
+              <a class="btn ghost" href="https://github.com/avtotrainer/guga" target="_blank" rel="noopener">🐙 GitHub</a>
+              <a class="btn" href="https://avtotrainer.github.io/guga/" target="_blank" rel="noopener">🔗 ჩემი საიტი</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
+    <!-- RESULTS -->
+    <section id="results">
       <div class="container">
-        <h2>ჩემ შესახებ</h2>
-        <p class="muted">
-          ტექნოლოგიებში ჩავერთე საზაფხულო სკოლის დროს: ყველა კომპიუტერზე წინასწარ დაყენებული იყო Manjaro Linux,
-          დასრულების შემდეგ კი გარემო კვლავ გადაერთო Windows-ზე, სადაც **WSL/WSLg ავამუშავე**. პროგრამის განმავლობაში მე:
-        </p>
-        <ul class="muted">
-          <li>**Manjaro Linux დავაყენე** და განვაახლე; GNOME ინტერფეისით ვიმუშავე.</li>
-          <li>ტერმინალი: <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>touch</code>, <code>cat</code>, <code>nano</code>, <code>rm</code>.</li>
-          <li>Google Workspace (Docs, Sheets, Slides) + Chat/Meet ჯგუფური კომუნიკაციისთვის (ჯგუფი: <strong>ira25@din.ge</strong>).</li>
-          <li>Git/GitHub — ვერსიების კონტროლი, Pull/Push გუნდურად.</li>
-          <li>**GitHub Pages-ზე ავაქვეყნე** საკუთარი სტატიკური საიტი.</li>
-          <li>Bash სკრიპტინგი — პატარა ავტომატიზაციები.</li>
-        </ul>
+        <h2>მიღწევები (Highlights)</h2>
+        <div class="grid cols-3">
+          <article class="card sm">
+            <h3 style="margin:0 0 6px">🧠 სწრაფი ათვისება</h3>
+            <p class="muted">CLI-დან GUI-მდე — ახალი თემების დაჭერა და დაკომპოზიცია რეალურ ამოცანებად.</p>
+          </article>
+          <article class="card sm">
+            <h3 style="margin:0 0 6px">🎯 WSL/WSLg ჩემპიონი</h3>
+            <p class="muted">WSL-ის დადგმა/კონფიგი, Linux GUI აპების გაშვება Windows-ზე.</p>
+          </article>
+          <article class="card sm">
+            <h3 style="margin:0 0 6px">🚀 GitHub Pages</h3>
+            <p class="muted">პერსონალური საიტების დიზაინი და <b>გამოქვეყნება</b>, Pull Request-ებით თანამშრომლობა.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -178,29 +173,33 @@
     <section id="projects">
       <div class="container">
         <h2>პროექტები</h2>
-        <p class="muted">შერჩეული ნამუშევრები საზაფხულო სკოლის დროიდან:</p>
         <div class="grid cols-3">
           <article class="card">
-            <h3 style="margin:0">📄 პირადი გვერდი</h3>
-            <span class="mini">HTML/CSS</span> <span class="mini">GitHub Pages</span>
-            <p class="muted">ერთგვერდიანი საიტი ჩემი ბიოსა და საკონტაქტო ინფორმაციით.</p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap">
-              <!-- Live ბმული ჩასვი როცა გექნება -->
-              <a class="btn ghost" href="#" target="_blank">Live</a>
+            <h3 style="margin:0 0 6px">📄 პირადი პორტფოლიო</h3>
+            <span class="badge">HTML/CSS</span> <span class="badge">GitHub Pages</span>
+            <p class="muted">სწრაფი, ხელმისაწვდომი, მინიმალისტურ-ელეგანტური.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap">
+              <a class="btn ghost" href="https://avtotrainer.github.io/guga/" target="_blank" rel="noopener">Live</a>
               <a class="btn ghost" href="https://github.com/avtotrainer/guga" target="_blank" rel="noopener">Source</a>
             </div>
           </article>
 
           <article class="card">
-            <h3 style="margin:0">🔧 ავტო-კომიტის სკრიპტი</h3>
-            <span class="mini">Bash</span> <span class="mini">Git</span>
-            <p class="muted">სკრიპტი, რომელიც timestamp-ს ამატებს და ავტომატურად commit/push-ს აკეთებს.</p>
+            <h3 style="margin:0 0 6px">🔐 კრიპტო-დემო CLI</h3>
+            <span class="badge">Bash</span> <span class="badge">SHA-256</span>
+            <p class="muted">ფაილის ჰაშის მიღება და კონტროლი რეპოში არსებულ კონტროლთან.</p>
+<pre><code># hash.sh
+sha256sum &quot;$1&quot; | awk '{print $1}'</code></pre>
           </article>
 
           <article class="card">
-            <h3 style="margin:0">🔐 კრიპტო-დემო</h3>
-            <span class="mini">CLI</span> <span class="mini">SHA-256</span>
-            <p class="muted">ფაილის ჰაშის მიღება და კონტროლი ტერმინალიდან.</p>
+            <h3 style="margin:0 0 6px">🤖 ავტო-კომიტი</h3>
+            <span class="badge">Bash</span> <span class="badge">Git</span>
+            <p class="muted">ტაიმსტამპიანი commit + push ერთ ბრძანებაში.</p>
+<pre><code># auto.sh
+git add -A
+git commit -m &quot;update: $(date +%F-%T)&quot;
+git push</code></pre>
           </article>
         </div>
       </div>
@@ -213,12 +212,70 @@
         <div class="grid cols-2">
           <div class="card">
             <h3 style="margin:0 0 6px">ტექნოლოგიები</h3>
-            <p class="muted">Linux (Manjaro/Ubuntu) · GNOME · Git · GitHub · GitHub Pages · Bash · WSL/WSLg</p>
+            <p class="muted">Linux (Manjaro/Ubuntu) · Bash · Git/GitHub · GitHub Pages · WSL/WSLg</p>
+            <div>
+              <div class="muted" style="margin:6px 0 4px">WSL/WSLg</div>
+              <div class="bar"><i style="width:92%"></i></div>
+              <div class="muted" style="margin:10px 0 4px">Bash</div>
+              <div class="bar"><i style="width:88%"></i></div>
+              <div class="muted" style="margin:10px 0 4px">Git/GitHub</div>
+              <div class="bar"><i style="width:85%"></i></div>
+            </div>
           </div>
           <div class="card">
             <h3 style="margin:0 0 6px">რბილი უნარები</h3>
-            <p class="muted">გუნდური მუშაობა · კომუნიკაცია (Google Chat/Meet) · პრეზენტაცია (Slides) · პრობლემების გადაჭრა</p>
+            <p class="muted">გამოხატული <b>გადმოცემის/სწავლების უნარი</b>, გუნდური კომუნიკაცია, პრეზენტაცია.</p>
+            <ul class="muted" style="margin:8px 0 0 16px">
+              <li>სირთულეების მარტივად ახსნა თანაკლასელებისთვის (mini-mentoring).</li>
+              <li>ლაბორატორიისთვის ინსტრუქციების დაწერა და დემონსტრაციები.</li>
+              <li>კოდის მიმოხილვები და zsh/bash შეტിപ്പების გაზიარება.</li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline">
+      <div class="container">
+        <h2>დროითი ხაზი</h2>
+        <div class="card">
+          <div class="tl">
+            <div class="tli"><b>დღე 1:</b> Manjaro Linux — ინსტალაცია/განახლება, GNOME.</div>
+            <div class="tli"><b>დღე 2:</b> ტერმინალი და ფაილური სტრუქტურა.</div>
+            <div class="tli"><b>დღე 3:</b> Git/GitHub, SSH გასაღებები, commit/push.</div>
+            <div class="tli"><b>დღე 4:</b> GitHub Pages — საიტის აგება და <b>გამოქვეყნება</b>.</div>
+            <div class="tli"><b>დღე 5:</b> WSL/WSLg — კონფიგურაცია და GUI აპები.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING / SHARING -->
+    <section id="teach">
+      <div class="container">
+        <h2>სწავლება & გაზიარება</h2>
+        <div class="grid cols-2">
+          <article class="card">
+            <h3 style="margin:0 0 6px">WSL სწრაფი გზამკვლევი (გუგას ვერსია)</h3>
+            <p class="muted">Windows → Features: „Windows Subsystem for Linux“ + „Virtual Machine Platform“, შემდეგ:</p>
+<pre><code>wsl --install -d Ubuntu
+wsl --list --online
+wsl --set-default-version 2
+</code></pre>
+            <p class="muted">WSLg ავტომატურად ერთვის Win11-ზე: გაუშვი <code>gedit</code> ან <code>nautilus</code> შიგნიდან.</p>
+          </article>
+          <article class="card">
+            <h3 style="margin:0 0 6px">GitHub Pages სწრაფად</h3>
+<pre><code>git init
+git add -A
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/avtotrainer/guga.git
+git push -u origin main
+</code></pre>
+            <p class="muted">Settings → Pages → Source: <b>Main</b>, Folder: <b>/ (root)</b>.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -229,18 +286,17 @@
         <h2>კონტაქტი</h2>
         <div class="grid cols-2">
           <div class="card">
-            <p class="muted">მომწერე ელ-ფოსტაზე ან გადახედე რეპოზიტორს GitHub-ზე.</p>
+            <p class="muted">მომწერე ან გადახედე ჩემს ცოცხალ გვერდს/რეპოზიტორს.</p>
             <p>✉️ <a href="mailto:guga422@din.ge">guga422@din.ge</a></p>
             <p>🐙 <a href="https://github.com/avtotrainer/guga" target="_blank" rel="noopener">github.com/avtotrainer/guga</a></p>
+            <p>🔗 <a href="https://avtotrainer.github.io/guga/" target="_blank" rel="noopener">avtotrainer.github.io/guga/</a></p>
           </div>
-          <div class="card">
-            <form action="https://formspree.io/f/your-id" method="POST">
-              <label>სახელი <input name="name" required></label>
-              <label>ელ-ფოსტა <input type="email" name="email" required></label>
-              <label>შეტყობინება <textarea name="message" rows="3" required></textarea></label>
-              <button class="btn" type="submit">გაგზავნა</button>
-              <small class="muted">* თუ Formspree არ გამოიყენება, ამ ბლოკის ამოღება შეგიძლია.</small>
-            </form>
+          <div class="card" style="display:grid; grid-template-columns:120px 1fr; gap:12px; align-items:center">
+            <img
+              alt="QR — avtotrainer.github.io/guga/"
+              width="120" height="120"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&ecc=H&data=https%3A%2F%2Favtotrainer.github.io%2Fguga%2F">
+            <p class="muted">სკანირებით გადადი ჩემს Live გვერდზე. (თუ QR არ ჩნდება, ინტერნეტი შეამოწმე.)</p>
           </div>
         </div>
       </div>
@@ -250,10 +306,10 @@
   <footer>
     <div class="container">
       <div class="sep"></div>
-      <div class="footer-grid">
+      <div class="foot">
         <span>© <span id="y"></span> გუგა შათირიშვილი</span>
         <span class="muted">განახლდა: <span id="lm"></span></span>
-        <span class="muted">რეპო: <a href="https://github.com/avtotrainer/guga" target="_blank" rel="noopener">avtotrainer/guga</a></span>
+        <span class="muted">საიტი: <a href="https://avtotrainer.github.io/guga/" target="_blank" rel="noopener">guga</a></span>
       </div>
     </div>
   </footer>
@@ -270,6 +326,7 @@
     "@type":"Person",
     "name":"გუგა შათირიშვილი",
     "email":"mailto:guga422@din.ge",
+    "url":"https://avtotrainer.github.io/guga/",
     "sameAs":["https://github.com/avtotrainer/guga"]
   }
   </script>
